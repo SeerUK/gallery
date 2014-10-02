@@ -16,7 +16,7 @@ use Symfony\Component\HttpFoundation\Response;
 /**
  * Homepage Controller
  *
- * @author  Elliot Wright <elliot@elliotwright.co>
+ * @author Elliot Wright <elliot@elliotwright.co>
  */
 class HomepageController extends Controller
 {
@@ -27,6 +27,6 @@ class HomepageController extends Controller
      */
     public function viewAction()
     {
-        return new Response('Hello world!');
+        return new Response('<html><body>Hello world!</body></html>');
     }
 }
