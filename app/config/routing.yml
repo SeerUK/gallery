@@ -1,0 +1,4 @@
+gallery_core:
+    resource: "@GalleryCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+

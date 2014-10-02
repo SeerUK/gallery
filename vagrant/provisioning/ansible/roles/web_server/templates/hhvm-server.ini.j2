@@ -1,0 +1,16 @@
+; php options
+pid = /var/run/hhvm/pid
+date.timezone = Europe/London
+
+; hhvm specific
+hhvm.server.port = 9000
+hhvm.server.type = fastcgi
+hhvm.server.default_document = index.php
+hhvm.log.use_log_file = true
+hhvm.log.file = /var/log/hhvm/error.log
+hhvm.repo.central.path = /var/run/hhvm/hhvm.hhbc
+
+hhvm.resource_limit.socket_default_timeout = 30
+hhvm.http.slow_query_threshold = 30000
+
+hhvm.libxml.ext_entity_whitelist = file,http

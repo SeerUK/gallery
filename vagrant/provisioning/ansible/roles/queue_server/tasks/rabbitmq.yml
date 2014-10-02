@@ -1,0 +1,10 @@
+---
+- name: Install RabbitMQ
+  apt: name=rabbitmq-server state=present
+
+- name: Install `pgc_queue` User
+  rabbitmq_user: user=pgc_queue password=abc123 vhost=/ configure_priv=.* read_priv=.* write_priv=.* state=present
+  notify: Restart RabbitMQ
+
+- name: Enable `rabbitmq_management` Plugin
+  rabbitmq_plugin: names=rabbitmq_management state=enabled
