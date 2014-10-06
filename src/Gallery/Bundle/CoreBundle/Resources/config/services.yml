@@ -1,6 +1,14 @@
 parameters:
+    gallery_core.controller.class: Gallery\Bundle\CoreBundle\Controller\Controller
     gallery_core.controller.homepage.class: Gallery\Bundle\CoreBundle\Controller\HomepageController
 
 services:
+    gallery_core.controller:
+        class: "%gallery_core.controller.class%"
+        abstract: true
+        calls:
+            - [setTemplating, ["@templating"]]
+
     gallery_core.controller.homepage:
-        class: %gallery_core.controller.homepage.class%
+        class: "%gallery_core.controller.homepage.class%"
+        parent: gallery_core.controller

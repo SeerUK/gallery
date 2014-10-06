@@ -27,6 +27,6 @@ class HomepageController extends Controller
      */
     public function viewAction()
     {
-        return new Response('<html><body>Hello world!</body></html>');
+        return $this->render('GalleryCoreBundle:Homepage:view.html.twig');
     }
 }
