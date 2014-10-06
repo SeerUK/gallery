@@ -1,0 +1,22 @@
+{
+    "name": "gallery",
+    "version": "1.0.0",
+    "authors": "Elliot Wright <elliot@elliotwright.co>",
+    "description": "Gallery Estate Agents",
+    "moduleType": [
+        "node"
+    ],
+    "keywords": [
+        "estate",
+        "agency",
+        "housing",
+        "properties"
+    ],
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "normalize.css": "~3.0.2",
+        "bourbon": "~4.0.2",
+        "neat": "~1.6.0"
+    }
+}

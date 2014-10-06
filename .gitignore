@@ -39,3 +39,9 @@
 # NPM
 /node_modules/
 
+# Compiled Assets
+/.sass-cache/
+/app/Resources/build/
+/app/Resources/src/vendor/
+/web/css/
+/web/js/
