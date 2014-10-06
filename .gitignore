@@ -34,4 +34,8 @@
 /composer.phar
 
 # PhpStorm and co. projects
-.idea/
+/.idea/
+
+# NPM
+/node_modules/
+
