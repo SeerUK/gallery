@@ -1,3 +1,25 @@
-p {
-  color: red;
+/*!
+ * This file is part of the gallery
+ *
+ * (c) Gallery Estate Agents
+ *
+ * @author Elliot Wright <elliot@elliotwright.co>
+ */
+
+* {
+  box-sizing: border-box;
 }
+
+// Vendor
+@import "../vendor/bourbon/dist/bourbon";
+@import "../vendor/neat/app/assets/stylesheets/neat";
+
+// Modules
+@import "modules/variables";
+
+// Partials
+@import "partials/typography";
+@import "partials/scaffolding";
+@import "partials/header";
+@import "partials/news";
+@import "partials/footer";

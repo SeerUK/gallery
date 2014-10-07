@@ -1,0 +1,59 @@
+/*
+ * This file is part of the gallery
+ *
+ * (c) Gallery Estate Agents
+ *
+ * @author Elliot Wright <elliot@elliotwright.co>
+ */
+
+/**
+ * Variables
+ */
+
+// Shades
+$black:      #2B303B;
+$charDark:   #343D46;
+$char:       #4F5B66;
+$charLight:  #65737E;
+$smokeDark:  #A7ADBA;
+$smoke:      #C0C5CE;
+$smokeLight: #DFE1E8;
+$white:      #EFF1F5;
+
+// Colours
+$brown:  #BE643C;
+$red:    #E74C3C;
+$orange: #E67E22;
+$yellow: #F1C40F;
+$green:  #2ECC71;
+$cyan:   #1ABC9C;
+$blue:   #3498DB;
+$purple: #9B59B6;
+
+// Typography
+$text-base:    $charDark;
+$text-muted:   $smokeDark;
+$text-primary: $red;
+$text-success: $green;
+$text-info:    $blue;
+$text-warning: $orange;
+$text-danger:  $red;
+
+$font-stack-sans: "Alegreya Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-stack-mono: Inconsolata, monospace;
+$font-stack-base: $font-stack-sans;
+
+$font-weight-light:  300;
+$font-weight-normal: 400;
+$font-weight-bold:   700;
+
+$font-size-base:   18px;
+$line-height-base: 20px;
+
+$font-base: $font-weight-normal #{$font-size-base}/#{$line-height-base} $font-stack-base;
+
+// Breakpoints
+$screen-phone:  480px;
+$screen-tablet: 768px;
+$screen-med:    992px;
+$screen-lar:    1200px;

@@ -2,15 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}{% endblock %}{% if block('title') %} | {% endif %}{{ site_name }}</title>
+    <title>{% block title %}{% endblock %}{% if block("title") %} | {% endif %}{{ site_name }}</title>
 
-    <link href="{{ asset('css/style.css') }}" type="text/css" />
+    <link href="//fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700,700italic,400italic,300italic" rel="stylesheet" type="text/css" />
+    <link href="{{ asset("css/style.css") }}" rel="stylesheet" type="text/css" />
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
-    {% block body %}{% endblock %}
+    <header class="main">
+        <div class="header-container">
+            Header
+        </div>
+    </header>
 
-    <script src="{{ asset('js/scripts.js') }}" type="text/javascript"></script>
+    <section class="main">
+        <div class="main-container">
+            {% block body %}{% endblock %}
+        </div>
+    </section>
+
+    <section class="news">
+        <div class="news-container">
+            <span><strong>News:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat laoreet massa in cursus. Fusce pharetra convallis neque.</span>
+        </div>
+    </section>
+
+    <footer class="main">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="http://placehold.it/302x120" alt="{{ site_name }}" title="{{ site_name }}" />
+            </div>
+            <div class="footer-links">
+                <strong>QUICK LINKS</strong><br /><br />
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Property Search</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Student Accomodation</a></li>
+                    <li><a href="#">Investment Properties</a></li>
+                    <li><a href="#">Land &amp; New Homes</a></li>
+                    <li><a href="#">Builders &amp; Developers</a></li>
+                    <li><a href="#">Free Market Appraisal</a></li>
+                </ul>
+            </div>
+            <div class="footer-map">
+                <img src="http://placehold.it/302x120" alt="{{ site_name }}" title="{{ site_name }}" />
+            </div>
+            <hr />
+            <div class="footer-copyright">
+                <span>&copy; {{ "now"|date("Y") }} {{ site_name }}</span>
+            </div>
+            <div class="footer-social">
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ asset("js/scripts.js") }}" type="text/javascript"></script>
     {% block javascripts %}{% endblock %}
 </body>
 </html>
