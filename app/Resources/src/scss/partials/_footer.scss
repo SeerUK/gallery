@@ -11,76 +11,77 @@
  */
 
 footer.main {
-  background: $charDark;
-  color: $white;
-  font-size: 14px;
-  padding: 50px;
+    background: $charDark;
+    color: $white;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 50px;
 
-  a {
-    color: $smokeDark;
+    a {
+        color: $smokeDark;
 
-    &:hover {
-      color: $white;
-      text-decoration: none;
+        &:hover {
+            color: $white;
+            text-decoration: none;
+        }
     }
-  }
 
-  hr {
-    @include span-columns(12);
+      hr {
+        @include span-columns(12);
 
-    border: 0;
-    border-top: 1px solid $char;
-    display: block;
-    margin: 2em 0;
-  }
+        border: 0;
+        border-top: 1px solid $char;
+        display: block;
+        margin: 2em 0;
+    }
 
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .footer-container {
-  @include outer-container;
+    @include outer-container;
 
-  margin: 0 auto;
-  width: $screen-med;
+    margin: 0 auto;
+    width: $screen-med;
 }
 
 .footer-logo,
 .footer-links,
 .footer-map {
-  @include span-columns(4);
+    @include span-columns(4);
 }
 
 .footer-copyright,
 .footer-social {
-  @include span-columns(6);
+    @include span-columns(6);
 }
 
 .footer-links,
 .footer-map,
 .footer-social {
-  @include omega();
+    @include omega();
 }
 
 .footer-links {
-  ul {
-    @include span-columns(6);
-  }
+    ul {
+        @include span-columns(6);
+    }
 }
 
 .footer-copyright {
-  color: $smokeDark;
+    color: $smokeDark;
 }
 
 .footer-social {
-  text-align: right;
+    text-align: right;
 
-  ul {
-    li {
-      display: inline-block;
+    ul {
+        li {
+        display: inline-block;
+        }
     }
-  }
 }

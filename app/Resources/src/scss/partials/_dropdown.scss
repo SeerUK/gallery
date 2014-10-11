@@ -1,0 +1,36 @@
+/*
+ * This file is part of the gallery
+ *
+ * (c) Gallery Estate Agents
+ *
+ * @author Elliot Wright <elliot@elliotwright.co>
+ */
+
+/**
+ * Dropdown
+ */
+
+.dropdown {
+    border: 1px solid $charLight;
+    border-radius: 10px;
+    font-size: 24px;
+    line-height: 1;
+    padding: 10px 20px 10px 14px;;
+    text-align: left;
+    width: auto;
+
+    &:before,
+    &:after {
+        content: "\25B2";
+        font-size: 9px;
+        position: absolute;
+        right: 14px;
+        top: 12px;
+    }
+
+    &:after {
+        content: "\25BC";
+        top: auto;
+        bottom: 12px;
+    }
+}

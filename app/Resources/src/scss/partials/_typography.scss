@@ -11,14 +11,24 @@
  */
 
 body {
-  color: $text-base;
-  font: $font-base;
+    color: $text-base;
+    font: $font-base;
 }
 
 a {
-  text-decoration: none;
+    color: $text-primary;
+    text-decoration: none;
 
-  &:hover {
-    text-decoration: underline;
-  }
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: $font-weight-normal;
 }

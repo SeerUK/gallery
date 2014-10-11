@@ -1,0 +1,24 @@
+/*
+ * This file is part of the gallery
+ *
+ * (c) Gallery Estate Agents
+ *
+ * @author Elliot Wright <elliot@elliotwright.co>
+ */
+
+/**
+ * Panels
+ */
+
+.panels {
+    @include outer-container;
+
+    .panel {
+        @include span-columns(3);
+    }
+}
+
+.panel-title {
+    font-size: 24px;
+    margin-bottom: 1.5em;
+}
