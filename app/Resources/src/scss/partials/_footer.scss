@@ -15,7 +15,7 @@ footer.main {
     color: $white;
     font-size: 14px;
     line-height: 20px;
-    padding: 50px;
+    padding: 50px 0;
 
     a {
         color: $smokeDark;
@@ -43,7 +43,7 @@ footer.main {
 }
 
 .footer-container {
-    @include outer-container;
+    @include clearfix;
 
     margin: 0 auto;
     width: $screen-med;

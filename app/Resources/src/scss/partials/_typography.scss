@@ -32,3 +32,35 @@ h5,
 h6 {
     font-weight: $font-weight-normal;
 }
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-primary {
+    color: $text-primary;
+}
+
+.text-success {
+    color: $text-success;
+}
+
+.text-info {
+    color: $text-info;
+}
+
+.text-warning {
+    color: $text-warning;
+}
+
+.text-danger {
+    color: $text-danger;
+}
