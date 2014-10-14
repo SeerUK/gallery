@@ -17,6 +17,8 @@
     "dependencies": {
         "normalize.css": "~3.0.2",
         "bourbon": "~4.0.2",
-        "neat": "~1.6.0"
+        "neat": "~1.6.0",
+        "jquery": "~2.1.1",
+        "SelectOrDie": "~0.1.8"
     }
 }
