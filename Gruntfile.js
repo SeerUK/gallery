@@ -26,7 +26,6 @@ module.exports = function(grunt) {
                 files: {
                     "<%= dirs.build.css %>/vendor.min.css": [
                         "<%= dirs.src.vendor %>/normalize.css/normalize.css",
-                        "<%= dirs.src.vendor %>/SelectOrDie/_src/selectordie.css",
                     ]
                 }
             }
