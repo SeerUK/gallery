@@ -13,9 +13,18 @@
 .panels {
     @include outer-container;
 
+    padding: 30px 0;
+    text-align: justify;
+
     .panel {
         @include span-columns(3);
     }
+}
+
+.panel-icon {
+    color: $smoke;
+    font-size: 80px;
+    text-align: center;
 }
 
 .panel-title {

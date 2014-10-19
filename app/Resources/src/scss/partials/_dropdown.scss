@@ -12,7 +12,7 @@
 
 .dropdown {
     background: white;
-    border: 2px solid $white;
+    border: 2px solid $smokeLight;
     border-radius: 4px;
     cursor: default;
     display: inline-block;
@@ -63,7 +63,7 @@
     &:focus,
     &.focus,
     &.open {
-        border: 2px solid $smokeLight;
+        border: 2px solid $smoke;
         box-shadow: none;
     }
 }
@@ -143,7 +143,7 @@
 
     .sod_list_wrapper {
         background: #FFFFFF;
-        border: 2px solid $smokeLight;
+        border: 2px solid $smoke;
         color: $char;
         display: none;
         font-weight: $font-weight-normal;
