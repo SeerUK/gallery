@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}{% if block("title") %} | {% endif %}{{ site_name }}</title>
 
-    <link href="//fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700,700italic,400italic,300italic" rel="stylesheet" type="text/css" />
+    <link href="//fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,700,700italic,400italic,300italic,100italic" rel="stylesheet" type="text/css" />
     <link  href="{{ asset('fonts/retinaicon/retinaicon.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset("css/style.css") }}" rel="stylesheet" type="text/css" />
     {% block stylesheets %}{% endblock %}
@@ -19,7 +19,24 @@
 <body>
     <header class="main">
         <div class="header-container">
-            Header
+            <div class="header-logo">
+                <img src="{{ asset('img/logo.png') }}" alt="" height="30" width="200" />
+                <a href="{{ url('gallery_core_homepage_view') }}"></a>
+            </div>
+            <div class="header-navigation">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="{{ url('gallery_contact_contact_view') }}">Contact</a></li>
+                    <li><a href="#">Search</a></li>
+                </ul>
+            </div>
+            {% if headerJumbotron is defined %}
+                <div class="header-jumbotron">
+                    <h1 class="jumbotron-title">Your property.<br />Our passion.</h1>
+                    <p>Our commitment to people, and passion<br />for property ensure we stand out.</p>
+                </div>
+            {% endif %}
         </div>
     </header>
 
@@ -69,10 +86,10 @@
             <div class="footer-links">
                 <strong>QUICK LINKS</strong><br /><br />
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="{{ url('gallery_core_homepage_view') }}">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Careers</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="{{ url('gallery_contact_contact_view') }}">Contact</a></li>
                     <li><a href="#">Property Search</a></li>
                 </ul>
                 <ul>
@@ -84,7 +101,7 @@
                 </ul>
             </div>
             <div class="footer-map">
-                <img src="{{ asset('img/map_placeholder.gif') }}" alt="{{ site_name }}" title="{{ site_name }}" />
+                <img src="{{ asset('img/map-placeholder.gif') }}" alt="{{ site_name }}" title="{{ site_name }}" />
             </div>
             <hr />
             <div class="footer-copyright">

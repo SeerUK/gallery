@@ -1,0 +1,39 @@
+/*
+ * This file is part of the gallery
+ *
+ * (c) Gallery Estate Agents
+ *
+ * @author Elliot Wright <elliot@elliotwright.co>
+ */
+
+/**
+ * Forms
+ */
+
+input,
+textarea {
+    outline: none;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),
+textarea {
+    border: 2px solid $smokeLight;
+    border-radius: 4px;
+    padding: 10px 14px;
+
+    &:active,
+    &:focus,
+    &:hover {
+        border: 2px solid $smoke;
+    }
+}
+
+textarea {
+    height: 200px;
+    resize: none;
+}
+
+.input-block {
+    display: block;
+    width: 100%;
+}

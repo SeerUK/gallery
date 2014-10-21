@@ -1,0 +1,45 @@
+/*
+ * This file is part of the gallery
+ *
+ * (c) Gallery Estate Agents
+ *
+ * @author Elliot Wright <elliot@elliotwright.co>
+ */
+
+/**
+ * Contact
+ */
+
+.contact-container {
+    @include outer-container();
+
+    margin: 0 auto;
+    width: $screen-med;
+}
+
+.contact-main {
+    @include span-columns(9);
+}
+
+.contact-aside {
+    @include span-columns(3);
+}
+
+.contact-form {
+    @include outer-container();
+
+    padding-right: 50px;
+
+    .contact-input {
+        @include span-columns(6);
+        @include omega(2n);
+
+        padding: 20px;
+    }
+
+    .contact-body {
+        @include span-columns(12);
+
+        padding: 20px;
+    }
+}

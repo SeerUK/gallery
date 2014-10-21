@@ -11,12 +11,90 @@
  */
 
 header.main {
-    background: $red;
+    background-color: $red;
+    background-image: url('../img/header-background.png');
+    background-size: cover;
     color: $white;
-    padding: 50px 0;
+    padding: 60px 0;
+
+    a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 .header-container {
+    @include outer-container;
+
     margin: 0 auto;
     width: $screen-med;
+}
+
+.header-logo {
+    @include span-columns(4);
+
+    position: relative;
+
+    a {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+
+.header-navigation {
+    @include span-columns(8);
+    @include omega();
+
+    font-size: 15px;
+    text-align: right;
+    text-transform: uppercase;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            padding: 5px 0 5px 30px;
+
+            a {
+                padding: 5px 0 3px;
+
+                &:hover {
+                    border-bottom: 2px solid white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.header-jumbotron {
+    @include span-columns(12);
+
+    color: darken($red, 40%);
+    font-size: 32px;
+    line-height: 1.2em;
+    padding: 60px 0 30px;
+
+    p {
+        margin: 20px 0;
+    }
+
+    .jumbotron-title {
+        color: white;
+        font-size: 72px;
+        font-weight: $font-weight-thin;
+        line-height: 1em;
+        margin: 20px 0;
+        text-transform: uppercase;
+    }
 }

@@ -1,3 +1,7 @@
+gallery_contact:
+    resource: "@GalleryContactBundle/Resources/config/routing.yml"
+    prefix:   /
+
 gallery_core:
     resource: "@GalleryCoreBundle/Resources/config/routing.yml"
     prefix:   /

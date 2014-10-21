@@ -1,0 +1,3 @@
+gallery_contact_contact_view:
+    path:     /contact
+    defaults: { _controller: gallery_contact.controller.contact:viewAction }

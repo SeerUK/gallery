@@ -1,0 +1,7 @@
+parameters:
+    gallery_contact.controller.contact.class: Gallery\Bundle\ContactBundle\Controller\ContactController
+
+services:
+    gallery_contact.controller.contact:
+        class: "%gallery_contact.controller.contact.class%"
+        parent: gallery_core.controller

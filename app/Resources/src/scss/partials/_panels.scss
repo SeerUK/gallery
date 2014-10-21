@@ -13,6 +13,7 @@
 .panels {
     @include outer-container;
 
+    color: $charLight;
     padding: 30px 0;
     text-align: justify;
 
@@ -28,6 +29,8 @@
 }
 
 .panel-title {
+    color: $charDark;
     font-size: 24px;
     margin-bottom: 1.5em;
+    text-align: center;
 }
