@@ -4,6 +4,16 @@
 
 {% block body %}
 
+    <section class="contact-map-container">
+        <section id="map" class="contact-map-main"></section>
+        <section class="contact-map-content">
+            <div class="contact-map-jumbotron">
+                <h1 class="jumbotron-title">Say hello.</h1>
+                <p>We always look forward to hearing you.<br />Drop us a line (or two) below.</p>
+            </div>
+        </section>
+    </section>
+
     <section class="contact-container">
         <section class="contact-main">
             <form action="" class="contact-form">
@@ -35,5 +45,21 @@
             </dl>
         </aside>
     </section>
+
+{% endblock %}
+
+{% block javascripts %}
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhIl-zS11ToFsxpe8I4tUOhHKIY_aeGd0"></script>
+    <script>
+        var myOptions = {
+            zoom: 15,
+            center: new google.maps.LatLng(53.385873, -1.471471),
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
+        };
+
+        var map = new google.maps.Map(document.getElementById('map'), myOptions);
+    </script>
 
 {% endblock %}

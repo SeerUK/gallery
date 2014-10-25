@@ -17,10 +17,14 @@
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
-    <header class="main">
+    <header class="header-main {% if headerJumbotron is defined %}header-jumbotron{% endif %}">
         <div class="header-container">
             <div class="header-logo">
-                <img src="{{ asset('img/logo.png') }}" alt="" height="30" width="200" />
+                {% if headerJumbotron is defined %}
+                    <img src="{{ asset('img/logo.png') }}" alt="" height="30" width="200" />
+                {% else %}
+                    <img src="{{ asset('img/logo-dark.png') }}" alt="" height="30" width="200" />
+                {% endif %}
                 <a href="{{ url('gallery_core_homepage_view') }}"></a>
             </div>
             <div class="header-navigation">
@@ -32,9 +36,9 @@
                 </ul>
             </div>
             {% if headerJumbotron is defined %}
-                <div class="header-jumbotron">
-                    <h1 class="jumbotron-title">Your property.<br />Our passion.</h1>
-                    <p>Our commitment to people, and passion<br />for property ensure we stand out.</p>
+                <div class="jumbotron">
+                    <h1 class="jumbotron-title">{% block jumbotron_title %}{% endblock %}</h1>
+                    <p>{% block jumbotron_text %}{% endblock %}</p>
                 </div>
             {% endif %}
         </div>
@@ -65,11 +69,7 @@
         </div>
     </section>
 
-    <section class="main">
-        <div class="main-container">
-            {% block body %}{% endblock %}
-        </div>
-    </section>
+    {% block body %}{% endblock %}
 
     <section class="news">
         <div class="news-container">

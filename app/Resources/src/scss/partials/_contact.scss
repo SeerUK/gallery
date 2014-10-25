@@ -14,6 +14,7 @@
     @include outer-container();
 
     margin: 0 auto;
+    padding: 50px 0;
     width: $screen-med;
 }
 
@@ -41,5 +42,51 @@
         @include span-columns(12);
 
         padding: 20px;
+    }
+}
+
+.contact-map-container {
+    border-bottom: 1px solid $smoke;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.contact-map-main {
+    bottom: -100px;
+    left: -100px;
+    position: absolute;
+    right: -100px;
+    top: 0;
+}
+
+.contact-map-content {
+    background: rgba(255, 255,255, 0.4);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.contact-map-jumbotron {
+    @include outer-container();
+
+    font-size: 32px;
+    line-height: 1.2em;
+    margin: 0 auto;
+    padding: 90px 0;
+    width: $screen-med;
+
+    p {
+        margin: 20px 0;
+    }
+
+    .jumbotron-title {
+        font-size: 72px;
+        font-weight: $font-weight-thin;
+        line-height: 1em;
+        margin: 20px 0;
+        text-transform: uppercase;
     }
 }

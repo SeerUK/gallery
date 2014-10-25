@@ -11,15 +11,20 @@
  */
 
 .panels {
+    color: $charLight;
+    padding: 80px 0;
+    text-align: justify;
+}
+
+.panels-container {
     @include outer-container;
 
-    color: $charLight;
-    padding: 30px 0;
-    text-align: justify;
+    margin: 0 auto;
+    width: $screen-med;
+}
 
-    .panel {
-        @include span-columns(3);
-    }
+.panel {
+    @include span-columns(3);
 }
 
 .panel-icon {
