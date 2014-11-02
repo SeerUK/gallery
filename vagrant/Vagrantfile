@@ -7,8 +7,6 @@
 
 require "./helpers.rb"
 
-ENV['VAGRANT_DEFAULT_PROVIDER'] = "docker"
-
 VAGRANTFILE_API_VERSION = "2"
 CONFIG_DIST  = "config/machines.yml"
 CONFIG_LOCAL = "config/machines.local.yml"
@@ -16,51 +14,42 @@ CONFIG_LOCAL = "config/machines.local.yml"
 config = ConfigHelper::getConfig(CONFIG_DIST, CONFIG_LOCAL)
 machines = config["machines"]
 
-# puts YAML::dump(config)
-
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   machines.each do |name, machine|
     config.vm.define name do |node|
-      node.vm.provider "docker" do |d|
-        d.build_dir = "."
+      # Machine image
+      node.vm.box = "ubuntu/trusty64"
+      node.vm.hostname = machine["hostname"]
 
-        d.name = machine["hostname"]
-        d.has_ssh = true
+      # VirtualBox Setup
+      node.vm.provider "virtualbox" do |v|
+        v.name = machine["hostname"]
 
-        # Forwarded ports
-        if machine.include? "port_map"
-          d.ports = []
+        v.memory = 1024
+        v.cpus = 4
+      end
 
-          machine["port_map"].each do |forward|
-            d.ports.push("#{forward['host']}:#{forward['guest']}")
-          end
+      # Network
+      node.vm.network "private_network", ip: machine["ipv4"]
+
+      # Forwarded ports
+      if machine.include? "port_map"
+        machine["port_map"].each do |forward|
+          node.vm.network "forwarded_port", guest: forward["guest"], host: forward["host"]
         end
       end
 
       # Synced folders
       if machine.include? "folder_map"
         machine["folder_map"].each do |folder|
-          node.vm.synced_folder folder["host"], folder["guest"]
+          node.vm.synced_folder folder["host"], folder["guest"], type: "nfs"
         end
       end
 
-      node.ssh.private_key_path = "vagrant.key"
-
+      # Provisioning
       node.vm.provision "ansible" do |ansible|
         ansible.playbook = machine["playbook"]
         # ansible.verbose = "vvvv"
-      end
-
-      node.trigger.after :up, :option => "value" do
-        # Set up networking
-        run "sudo ./pipework br1 #{machine['hostname']} #{machine['ipv4']}/24"
-        run "sudo ifconfig br1 #{machine['bridge']} netmask 255.255.255.0"
-
-        if machine.include? "services"
-          machine["services"].each do |service|
-            run "ssh -x -C -i 'vagrant.key' vagrant@#{machine['ipv4']} sudo service #{service} start"
-          end
-        end
       end
     end
   end
