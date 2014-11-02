@@ -14,8 +14,13 @@
     @include outer-container();
 
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 0 40px;
     width: $screen-med;
+}
+
+.contact-main,
+.contact-aside {
+    padding: 50px 0;
 }
 
 .contact-main {
@@ -75,7 +80,7 @@
     font-size: 32px;
     line-height: 1.2em;
     margin: 0 auto;
-    padding: 90px 0;
+    padding: 90px 40px;;
     width: $screen-med;
 
     p {

@@ -20,6 +20,7 @@
     @include outer-container;
 
     margin: 0 auto;
+    padding: 0 40px;
     width: $screen-med;
 }
 
@@ -35,7 +36,7 @@
 
 .panel-title {
     color: $charDark;
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 1.5em;
     text-align: center;
 }
