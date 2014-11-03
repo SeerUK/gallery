@@ -10,14 +10,13 @@
  * News
  */
 
-.news {
-    background: $smokeLight;
+.news-main {
+    @extend %wrapper;
+
     color: $charLight;
-    padding: 40px 0;
 }
 
 .news-container {
-    margin: 0 auto;
-    padding: 0 40px;
-    width: $screen-med;
+    background: $smokeLight;
+    padding: 40px 0;
 }

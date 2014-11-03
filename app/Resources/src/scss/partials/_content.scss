@@ -11,13 +11,15 @@
  */
 
 .content-container {
-    @include outer-container();
-
-    margin: 0 auto;
-    padding: 0 40px;
-    width: $screen-med;
+    padding: 50px 0;
 }
 
 .content-main {
-    padding: 50px 0;
+    @extend %wrapper;
+
+    line-height: 1.5em;
+
+    p {
+        margin-bottom: 1.5em;
+    }
 }

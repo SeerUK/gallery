@@ -18,8 +18,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   machines.each do |name, machine|
     config.vm.define name do |node|
       # Machine image
-      node.vm.box = "ubuntu/trusty64"
       node.vm.hostname = machine["hostname"]
+      node.vm.box = "ubuntu/trusty64"
 
       # VirtualBox Setup
       node.vm.provider "virtualbox" do |v|

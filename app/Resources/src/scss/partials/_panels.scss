@@ -10,18 +10,15 @@
  * Panels
  */
 
-.panels {
+.panels-main {
+    @extend %wrapper;
+
     color: $charLight;
-    padding: 80px 0;
     text-align: justify;
 }
 
 .panels-container {
-    @include outer-container;
-
-    margin: 0 auto;
-    padding: 0 40px;
-    width: $screen-med;
+    padding: 80px 0;
 }
 
 .panel {

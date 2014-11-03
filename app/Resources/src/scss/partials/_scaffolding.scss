@@ -16,3 +16,11 @@ body {
     min-width: $screen-med;
     padding: 0;
 }
+
+%wrapper {
+    @include outer-container();
+
+    margin: 0 auto;
+    padding: 0 40px;
+    width: $screen-med;
+}

@@ -10,20 +10,16 @@
  * Contact
  */
 
-.contact-container {
-    @include outer-container();
-
-    margin: 0 auto;
-    padding: 0 40px;
-    width: $screen-med;
+.contact-main {
+    @extend %wrapper;
 }
 
-.contact-main,
+.contact-form,
 .contact-aside {
     padding: 50px 0;
 }
 
-.contact-main {
+.contact-form {
     @include span-columns(9);
 }
 
@@ -51,7 +47,7 @@
 }
 
 .contact-map-container {
-    border-bottom: 1px solid $smoke;
+    border-bottom: 1px solid $smokeLight;
     height: 400px;
     overflow: hidden;
     position: relative;
@@ -75,9 +71,8 @@
 }
 
 .contact-map-jumbotron {
-    @include outer-container();
+    @extend %wrapper;
 
-    margin: 0 auto;
-    padding: 90px 40px;;
-    width: $screen-med;
+    padding-bottom: 90px;
+    padding-top: 90px;
 }

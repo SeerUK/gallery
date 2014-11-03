@@ -11,16 +11,12 @@
  */
 
 .jumbotron-container {
-    @include outer-container();
-
     border-bottom: 1px solid $smokeLight;
     padding: 90px 0;
 }
 
 .jumbotron-main {
-    margin: 0 auto;
-    padding: 0 40px;
-    width: $screen-med;
+    @extend %wrapper;
 }
 
 .jumbotron-title {

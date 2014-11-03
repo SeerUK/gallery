@@ -10,16 +10,15 @@
  * Intent
  */
 
-.intent {
-    border-bottom: 1px solid $smokeLight;
-    padding: 40px 0;
-    text-align: center;
+.intent-main {
+    @extend %wrapper;
+
 }
 
 .intent-container {
-    margin: 0 auto;
-    padding: 0 40px;
-    width: $screen-med;
+    border-bottom: 1px solid $smokeLight;
+    padding: 40px 0;
+    text-align: center;
 }
 
 .intent-bar {

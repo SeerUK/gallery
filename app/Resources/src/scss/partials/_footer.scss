@@ -10,12 +10,12 @@
  * Footer
  */
 
-footer.main {
-    background: $charDark;
+.footer-main {
+    @extend %wrapper;
+
     color: $white;
     font-size: 14px;
     line-height: 20px;
-    padding: 50px 0;
 
     a {
         color: $smokeDark;
@@ -43,11 +43,8 @@ footer.main {
 }
 
 .footer-container {
-    @include clearfix;
-
-    margin: 0 auto;
-    padding: 0 40px;
-    width: $screen-med;
+    background: $charDark;
+    padding: 50px 0;
 }
 
 .footer-logo,

@@ -10,9 +10,13 @@
  * Header
  */
 
-.header-main {
+.header-container {
     border-bottom: 1px solid $smokeLight;
     padding: 40px 0;
+}
+
+.header-main {
+    @extend %wrapper;
 
     .header-navigation {
         a {
@@ -26,14 +30,6 @@
             }
         }
     }
-}
-
-.header-container {
-    @include outer-container;
-
-    margin: 0 auto;
-    padding: 0 40px;
-    width: $screen-med;
 }
 
 .header-logo {
@@ -78,10 +74,11 @@
 }
 
 .header-jumbotron {
-    &.header-main {
+    &.header-container {
         background-color: $red;
         background-image: url('../img/header-background.png');
         background-size: cover;
+        border: none;
         padding: 60px 0;
 
         .header-navigation {

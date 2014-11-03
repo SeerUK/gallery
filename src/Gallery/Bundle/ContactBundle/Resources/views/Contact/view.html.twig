@@ -4,7 +4,7 @@
 
 {% block body %}
 
-    <section class="contact-map-container">
+    <div class="contact-map-container">
         <section id="map" class="contact-map-main"></section>
         <section class="contact-map-content">
             <div class="contact-map-jumbotron">
@@ -12,39 +12,41 @@
                 <h2 class="jumbotron-subtitle">We always look forward to hearing you.<br />Drop us a line (or two) below.</h2>
             </div>
         </section>
-    </section>
+    </div>
 
-    <section class="contact-container">
+    <div class="contact-container">
         <section class="contact-main">
-            <form action="" class="contact-form">
-                <div class="contact-input">
-                    <input type="text" class="input-block" placeholder="First name" />
-                </div>
-                <div class="contact-input">
-                    <input type="text" class="input-block" placeholder="Last name" />
-                </div>
-                <div class="contact-input">
-                    <input type="text" class="input-block" placeholder="Email" />
-                </div>
-                <div class="contact-input">
-                    <input type="text" class="input-block" placeholder="Phone" />
-                </div>
-                <div class="contact-body">
-                    <textarea class="input-block" placeholder="Message"></textarea>
-                </div>
-            </form>
+            <section class="contact-form">
+                <form action="">
+                    <div class="contact-input">
+                        <input type="text" class="input-block" placeholder="First name" />
+                    </div>
+                    <div class="contact-input">
+                        <input type="text" class="input-block" placeholder="Last name" />
+                    </div>
+                    <div class="contact-input">
+                        <input type="text" class="input-block" placeholder="Email" />
+                    </div>
+                    <div class="contact-input">
+                        <input type="text" class="input-block" placeholder="Phone" />
+                    </div>
+                    <div class="contact-body">
+                        <textarea class="input-block" placeholder="Message"></textarea>
+                    </div>
+                </form>
+            </section>
+            <aside class="contact-aside">
+                <dl>
+                    <dt>Phone</dt>
+                    <dd>01234 567 890</dd>
+                    <dt>Fax</dt>
+                    <dd>01234 567 890</dd>
+                    <dt>Email</dt>
+                    <dd><a href="mailto:example@example.com">example@example.com</a></dd>
+                </dl>
+            </aside>
         </section>
-        <aside class="contact-aside">
-            <dl>
-                <dt>Phone</dt>
-                <dd>01234 567 890</dd>
-                <dt>Fax</dt>
-                <dd>01234 567 890</dd>
-                <dt>Email</dt>
-                <dd><a href="mailto:example@example.com">example@example.com</a></dd>
-            </dl>
-        </aside>
-    </section>
+    </div>
 
 {% endblock %}
 
