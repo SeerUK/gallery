@@ -1,0 +1,38 @@
+/*
+ * This file is part of the gallery
+ *
+ * (c) Gallery Estate Agents
+ *
+ * @author Elliot Wright <elliot@elliotwright.co>
+ */
+
+/**
+ * Jumbotron
+ */
+
+.jumbotron-container {
+    @include outer-container();
+
+    border-bottom: 1px solid $smokeLight;
+    padding: 90px 0;
+}
+
+.jumbotron-main {
+    margin: 0 auto;
+    padding: 0 40px;
+    width: $screen-med;
+}
+
+.jumbotron-title {
+    font-size: 72px;
+    font-weight: $font-weight-thin;
+    line-height: 1em;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.jumbotron-subtitle {
+    font-size: 32px;
+    line-height: 1.2em;
+    margin: 20px 0;
+}

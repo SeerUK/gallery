@@ -1,3 +1,7 @@
 gallery_core_homepage_view:
     path:     /
     defaults: { _controller: gallery_core.controller.homepage:viewAction }
+
+gallery_core_about_view:
+    path:     /about
+    defaults: { _controller: gallery_core.controller.about:viewAction}

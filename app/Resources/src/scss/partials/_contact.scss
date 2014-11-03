@@ -77,21 +77,7 @@
 .contact-map-jumbotron {
     @include outer-container();
 
-    font-size: 32px;
-    line-height: 1.2em;
     margin: 0 auto;
     padding: 90px 40px;;
     width: $screen-med;
-
-    p {
-        margin: 20px 0;
-    }
-
-    .jumbotron-title {
-        font-size: 72px;
-        font-weight: $font-weight-thin;
-        line-height: 1em;
-        margin: 20px 0;
-        text-transform: uppercase;
-    }
 }

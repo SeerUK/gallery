@@ -1,6 +1,7 @@
 parameters:
     gallery_core.controller.class: Gallery\Bundle\CoreBundle\Controller\Controller
     gallery_core.controller.homepage.class: Gallery\Bundle\CoreBundle\Controller\HomepageController
+    gallery_core.controller.about.class: Gallery\Bundle\CoreBundle\Controller\AboutController
 
 services:
     gallery_core.controller:
@@ -11,4 +12,8 @@ services:
 
     gallery_core.controller.homepage:
         class: "%gallery_core.controller.homepage.class%"
+        parent: gallery_core.controller
+
+    gallery_core.controller.about:
+        class: "%gallery_core.controller.about.class%"
         parent: gallery_core.controller

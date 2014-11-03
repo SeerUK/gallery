@@ -1,0 +1,23 @@
+/*
+ * This file is part of the gallery
+ *
+ * (c) Gallery Estate Agents
+ *
+ * @author Elliot Wright <elliot@elliotwright.co>
+ */
+
+/**
+ * Content
+ */
+
+.content-container {
+    @include outer-container();
+
+    margin: 0 auto;
+    padding: 0 40px;
+    width: $screen-med;
+}
+
+.content-main {
+    padding: 50px 0;
+}
