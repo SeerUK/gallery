@@ -9,3 +9,9 @@
 
 - name: Install Supervisor Config
   template: src=../templates/supervisord.conf.j2 dest=/etc/supervisor/conf.d/supervisord.conf owner=root group=root
+
+- name: Add www-data Group
+  group: name=www-data state=present
+
+- name: Add www-data User
+  user: name=www-data group=www-data home=/var/www shell=/bin/bash state=present
