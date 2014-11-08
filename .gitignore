@@ -45,3 +45,5 @@
 /app/Resources/src/vendor/
 /web/css/
 /web/js/
+
+**/.DS_Store
