@@ -1,5 +1,5 @@
 galweb:
-  build: crane/docker/web_server
+  build: fig/docker/web_server
   links:
   - galdb:galdb
   - galcache:galcache
@@ -10,9 +10,9 @@ galweb:
   - ./:/opt/www
 
 galdb:
-  build: crane/docker/db_server
+  build: fig/docker/db_server
   ports:
   - "3306:3306"
 
 galcache:
-  build: crane/docker/cache_server
+  build: fig/docker/cache_server
