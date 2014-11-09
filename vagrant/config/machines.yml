@@ -1,0 +1,28 @@
+---
+machines:
+  gal_web:
+    hostname: "tifa"
+    ipv4: "192.168.60.10"
+    playbook: "provisioning/ansible/web_server.yml"
+    port_map:
+    - { guest: 80, host: 80 }
+    - { guest: 443, host: 443 }
+    folder_map:
+    - guest: "/opt/www"
+      host: "../"
+      owner: www-data
+      group: www-data
+      exclude:
+      - ".git"
+      - "app/cache"
+      - "app/logs"
+
+  gal_db:
+    hostname: "mila"
+    ipv4: "192.168.60.20"
+    playbook: "provisioning/ansible/db_server.yml"
+
+  gal_cache:
+    hostname: "anya"
+    ipv4: "192.168.60.30"
+    playbook: "provisioning/ansible/cache_server.yml"
