@@ -9,13 +9,12 @@ machines:
     - { guest: 443, host: 443 }
     folder_map:
     - guest: "/opt/www"
-      host: "../"
+      host: "../src"
       owner: www-data
       group: www-data
-      exclude:
-      - ".git"
-      - "app/cache"
-      - "app/logs"
+      # exclude:
+      # - "app/cache"
+      # - "app/logs"
 
   gal_db:
     hostname: "mila"
