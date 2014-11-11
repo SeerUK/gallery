@@ -28,10 +28,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       # Synced folders
       if machine.include? "folder_map"
         machine["folder_map"].each do |folder|
-          node.vm.synced_folder folder["host"], folder["guest"], type: "nfs"#,
-            # rsync__exclude: folder["exclude"],
-            # owner: folder["owner"],
-            # group: folder["group"]
+          node.vm.synced_folder folder["host"], folder["guest"], type: "rsync",
+            rsync__exclude: folder["exclude"],
+            owner: folder["owner"],
+            group: folder["group"]
         end
       end
 
