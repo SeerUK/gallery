@@ -1,4 +1,0 @@
----
-- include: common.yml
-- include: nginx.yml
-- include: hhvm.yml

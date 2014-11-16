@@ -15,7 +15,7 @@ textarea {
     outline: none;
 }
 
-input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]),
 textarea {
     border: 2px solid $smokeLight;
     border-radius: 4px;
