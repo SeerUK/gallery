@@ -13,6 +13,9 @@
 .intent-main {
     @extend %wrapper;
 
+    & + & {
+        margin-top: 20px;
+    }
 }
 
 .intent-container {

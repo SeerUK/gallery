@@ -26,6 +26,8 @@ module.exports = function(grunt) {
                 files: {
                     "<%= dirs.build.css %>/vendor.min.css": [
                         "<%= dirs.src.vendor %>/normalize.css/normalize.css",
+                        "<%= dirs.src.vendor %>/nouislider/distribute/jquery.nouislider.min.css",
+                        "<%= dirs.src.vendor %>/nouislider/distribute/jquery.nouislider.pips.min.css",
                     ]
                 }
             }
@@ -48,6 +50,7 @@ module.exports = function(grunt) {
                 files: {
                     "<%= dirs.js %>/scripts.js": [
                         "<%= dirs.src.vendor %>/jquery/dist/jquery.min.js",
+                        "<%= dirs.src.vendor %>/nouislider/distribute/jquery.nouislider.all.js",
                         "<%= dirs.src.vendor %>/SelectOrDie/_src/selectordie.min.js",
                         "<%= dirs.build.js %>/scripts.min.js"
                     ]

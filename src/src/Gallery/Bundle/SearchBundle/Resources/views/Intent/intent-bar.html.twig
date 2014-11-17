@@ -47,4 +47,25 @@
             <button class="button button-primary">Go</button>
         </div>
     </section>
+    {% if advanced %}
+
+        <section class="intent-main">
+            <div class="intent-bar">{#
+                <span class="intent-text">Minimum Price</span>
+                <select name="" id="">
+                    <option value="">£0 - £100,000</option>
+                </select> #}
+                <span class="intent-text">Maximum Price</span>
+                <div class="slider"></div>
+                <div class="range"></div>
+            </div>
+            {# <ul>
+                <li>Minimum &amp; Maximum Price</li>
+                <li>Price Sorting</li>
+                <li>Classification (Not specified)</li>
+                <li>Property Type (Not wanted)</li>
+            </ul> #}
+        </section>
+
+    {% endif %}
 </div>

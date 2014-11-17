@@ -12,6 +12,7 @@
 namespace Gallery\Bundle\SearchBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Intent Controller
@@ -20,8 +21,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
  */
 class IntentController extends Controller
 {
-    public function renderAction()
+    /**
+     * Render intent bar
+     *
+     * @return Response
+     */
+    public function renderAction($advanced = false)
     {
-        return $this->render('GallerySearchBundle:Intent:intent-bar.html.twig');
+        return $this->render('GallerySearchBundle:Intent:intent-bar.html.twig', [
+            "advanced" => $advanced,
+        ]);
     }
 }
