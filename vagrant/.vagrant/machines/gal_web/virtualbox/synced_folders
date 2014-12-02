@@ -1,1 +1,0 @@
-{"rsync":{"/opt/www":{"type":"rsync","owner":"www-data","group":"www-data","guestpath":"/opt/www","hostpath":"/Users/seer/git/SeerUK@github.com/gallery/src","disabled":false}},"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/seer/git/SeerUK@github.com/gallery/vagrant","disabled":false}}}
