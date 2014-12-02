@@ -8,13 +8,13 @@ module.exports = function(grunt) {
         // Define locations of files
         dirs: {
             build: {
-                css: "src/app/Resources/build/css",
-                js: "src/app/Resources/build/js"
+                css: "app/Resources/build/css",
+                js: "app/Resources/build/js"
             },
             src: {
-                scss: "src/app/Resources/src/scss",
-                js: "src/app/Resources/src/js",
-                vendor: "src/app/Resources/src/vendor"
+                scss: "app/Resources/src/scss",
+                js: "app/Resources/src/js",
+                vendor: "app/Resources/src/vendor"
             },
             css: "src/web/css",
             js: "src/web/js"
