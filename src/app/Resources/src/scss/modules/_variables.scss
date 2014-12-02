@@ -40,7 +40,7 @@ $text-info:    $blue;
 $text-warning: $orange;
 $text-danger:  $red;
 
-$font-stack-sans: "Alegreya Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-stack-sans: "proxima-nova", "Alegreya Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-stack-mono: Inconsolata, monospace;
 $font-stack-base: $font-stack-sans;
 
@@ -49,8 +49,8 @@ $font-weight-light:  300;
 $font-weight-normal: 400;
 $font-weight-bold:   700;
 
-$font-size-base:   18px;
-$line-height-base: 26px;
+$font-size-base:   14px;
+$line-height-base: 24px;
 
 $font-base: $font-weight-normal #{$font-size-base}/#{$line-height-base} $font-stack-base;
 

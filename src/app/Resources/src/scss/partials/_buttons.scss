@@ -13,14 +13,17 @@
 
 .button {
     background: $smoke;
-    border: none;
+    border: 1px solid transparent;
     border-radius: 3px;
     color: $white;
     display: inline-block;
+    font-size: 0.85em;
+    font-weight: $font-weight-bold;
+    height: 40px;
+    line-height: 40px;
     outline: none;
-    padding: 11px 14px;
-    text-align: center;
-    vertical-align: top;
+    padding: 0 15px;
+    text-transform: uppercase;
 
     &:hover,
     &:focus {
@@ -56,7 +59,7 @@
 
 .button-success {
     background: $green;
-    color: $white;
+    color: white;
 
     &:hover,
     &:active,
@@ -67,7 +70,7 @@
 
 .button-info {
     background: $blue;
-    color: $white;
+    color: white;
 
     &:hover,
     &:active,
@@ -78,7 +81,7 @@
 
 .button-warning {
     background: $orange;
-    color: $white;
+    color: white;
 
     &:hover,
     &:active,
@@ -89,11 +92,24 @@
 
 .button-danger {
     background: $red;
-    color: $white;
+    color: white;
 
     &:hover,
     &:active,
     &:focus {
         background: darken($red, 3%);
+    }
+}
+
+.button-clear {
+    background: transparent;
+    color: $charLight;
+    border: 1px solid $smokeLight;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background: transparent;
+        border-color: $smokeDark;
     }
 }

@@ -11,11 +11,17 @@
  * Footer
  */
 
+
+.footer-container {
+    background: $charDark;
+    padding: 50px 0;
+}
+
 .footer-main {
     @extend %wrapper;
 
     color: $white;
-    font-size: 14px;
+    font-size: 0.85em;
     line-height: 20px;
 
     a {
@@ -41,11 +47,6 @@
         margin: 0;
         padding: 0;
     }
-}
-
-.footer-container {
-    background: $charDark;
-    padding: 50px 0;
 }
 
 .footer-logo,

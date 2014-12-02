@@ -16,8 +16,8 @@ module.exports = function(grunt) {
                 js: "app/Resources/src/js",
                 vendor: "app/Resources/src/vendor"
             },
-            css: "src/web/css",
-            js: "src/web/js"
+            css: "web/css",
+            js: "web/js"
         },
 
         // Minify CSS resources

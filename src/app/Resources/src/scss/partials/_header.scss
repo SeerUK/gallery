@@ -13,7 +13,7 @@
 
 .header-container {
     border-bottom: 1px solid $smokeLight;
-    padding: 40px 0;
+    padding: 30px 0;
 }
 
 .header-main {
@@ -55,7 +55,6 @@
     @include span-columns(8);
     @include omega();
 
-    font-size: 17px;
     text-align: right;
 
     ul {

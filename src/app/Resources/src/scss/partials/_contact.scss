@@ -37,19 +37,19 @@
         @include span-columns(6);
         @include omega(2n);
 
-        padding: 20px;
+        margin-bottom: 20px;
     }
 
     .contact-body {
         @include span-columns(12);
 
-        padding: 20px;
+        margin-bottom: 40px;
     }
 }
 
 .contact-map-container {
     border-bottom: 1px solid $smokeLight;
-    height: 400px;
+    height: 350px;
     overflow: hidden;
     position: relative;
 }
